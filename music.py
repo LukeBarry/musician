@@ -1,7 +1,7 @@
 class Musician(object):
     def __init__(self, sounds):
         self.sounds = sounds
-        self.name = self  # Kyle: how can I make this be the musician's name taken from the object name?
+        self.name = self  
 
     def solo(self, length):
         for i in range(length):
@@ -9,15 +9,13 @@ class Musician(object):
         print()
 
 
-class Bassist(Musician):  # The Musician class is the parent of the Bassist class
+class Bassist(Musician):  
     def __init__(self):
-        # Call the __init__ method of the parent class
         super().__init__(["Bump", "Badump", "Baba"])
 
 
 class Guitarist(Musician):
     def __init__(self):
-        # Call the __init__ method of the parent class
         super().__init__(["Duh", "DaDuh", "Blam"])
 
     def tune(self):
